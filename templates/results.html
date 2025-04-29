@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <!-- Optional: Link to Bootstrap for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Analysis Results for Each User</h1>
+        {% for user, activity in user_activity.items() %}
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3>{{ user }}</h3>
+                </div>
+                <div class="card-body">
+                    <p><strong>Number of Messages:</strong> {{ activity['num_messages'] }}</p>
+                    <p><strong>Number of Media Shared:</strong> {{ activity['media_shared'] }}</p>
+                    <p><strong>Most Frequently Used Emojis:</strong> {{ activity['emoji_counts'] }}</p>
+                    <p><strong>Most Frequently Used Words:</strong> {{ activity['most_common_words'] }}</p>
+                </div>
+            </div>
+        {% endfor %}
+        <a href="/" class="btn btn-secondary mt-3">Back to Home</a>
+    </div>
+</body>
+</html>

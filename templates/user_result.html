@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Analysis Result</title>
+    <!-- Optional: Link to Bootstrap for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">User Analysis Result</h1>
+
+        <!-- Check if the user is found -->
+        {% if user_activity %}
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3>Analysis for {{ user }}</h3>
+                </div>
+                <div class="card-body">
+                    <p><strong>Number of Messages:</strong> {{ user_activity.num_messages }}</p>
+                    <p><strong>Number of Media Shared:</strong> {{ user_activity.media_shared }}</p>
+                    <p><strong>Most Frequently Used Emojis:</strong> 
+                        {% for emoji, count in user_activity.emoji_counts %}
+                            {{ emoji }} ({{ count }}) 
+                        {% endfor %}
+                    </p>
+                    <p><strong>Most Frequently Used Words:</strong> 
+                        {% for word, count in user_activity.most_common_words %}
+                            {{ word }} ({{ count }}) 
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-body">
+                     <!-- Display Word Cloud -->
+                <div class="text-center">
+                    <h3>Word Cloud</h3>
+                    <img src="{{ wordcloud_path }}" alt="Word Cloud for {{ user }}" class="img-fluid"/>
+                </div>
+
+                <!-- Display Active Hours -->
+                <div class="text-center mt-4">
+                    <h3>Most Active Hours</h3>
+                    <img src="{{ active_hours_path }}" alt="Most Active Hours for {{ user }}" class="img-fluid"/>
+                </div>
+
+                <!-- Display Active Days -->
+                <div class="text-center mt-4">
+                    <h3>Most Active Days</h3>
+                    <img src="{{ active_days_path }}" alt="Most Active Days for {{ user }}" class="img-fluid"/>
+                </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="alert alert-danger text-center" role="alert">
+                User "{{ user }}" not found in the chat data.
+            </div>
+        {% endif %}
+        
+
+        <!-- Button to go back to overall analysis -->
+        <!-- <a href="/" class="btn btn-secondary mt-3">Back to Home</a> -->
+    </div>
+</body>
+</html>

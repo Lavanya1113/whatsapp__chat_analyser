@@ -1,0 +1,837 @@
+1/6/24, 16:51 - Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them. Tap to learn more.
+1/6/24, 16:51 - Partner💟 created group "Mini Project 💫"
+1/6/24, 16:51 - Partner💟 added you
+1/6/24, 18:33 - Partner💟: <Media omitted>
+1/6/24, 18:33 - ~: N190727
+K.Lavanya
+CSE-01
+n190727@rguktn.ac.in
+9346903331
+1/6/24, 18:36 - Hyma Sri: N191079
+K.Hymasri
+CSE-06
+n191079@rguktn.ac.in
+9390741996
+1/6/24, 18:37 - Hyma Sri: N190336
+M.Pavani
+CSE-02
+n190336@rguktn.ac.in
+9392535057
+1/6/24, 18:38 - Pavani@cse2 added +91 93900 17331
+1/6/24, 18:38 - Pavani@cse2: <Media omitted>
+1/6/24, 18:38 - Pavani@cse2: Evi share cheyy
+1/6/24, 18:39 - +91 93900 17331: N190226
+Peruri Satya Bhaskar
+Cse-02
+n190226@rguktn.ac.in
+9390017331
+1/6/24, 18:40 - Pavani@cse2: Malleswari nedi kuda pettu sir ki pampista
+1/6/24, 18:42 - Partner💟: N190878
+Palthi Malleswari
+CSE-1
+n190878@rguktn.ac.in
+9014325263
+1/6/24, 18:45 - Pavani@cse2: Malleswari form fill cheset
+1/6/24, 18:45 - Pavani@cse2: Chesey
+1/7/24, 15:10 - ~: Kattula Lavanya
+1/22/24, 17:10 - Partner💟: <Media omitted>
+1/29/24, 15:59 - +91 93900 17331: Kk Singh Sir projects assign chestunnaranta
+1/29/24, 16:01 - ~: Haa...
+Class?
+1/29/24, 16:03 - +91 93900 17331: T1
+1/29/24, 16:03 - ~: Okay
+1/29/24, 16:13 - Partner💟: Andaru Ab2 T1 ki randi
+1/31/24, 18:31 - Pavani@cse2: https://neptune.ai/blog/transfer-learning-guide-examples-for-images-and-text-in-keras
+1/31/24, 18:31 - Pavani@cse2: https://medium.com/@draj0718/image-classification-and-prediction-using-transfer-learning-3cf2c736589d
+2/2/24, 18:43 - Pavani@cse2: Any progress.....?
+2/2/24, 18:43 - Pavani@cse2: Tomorrow evening vastam ani cheppanu
+2/3/24, 17:43 - Pavani@cse2: <Media omitted>
+2/3/24, 18:55 - ~: <Media omitted>
+2/5/24, 12:47 - Pavani@cse2: Guys today afternoon we have to meet kks sir
+2/5/24, 12:47 - Pavani@cse2: Class or cabin I will tell once I will get it
+2/5/24, 13:19 - Pavani@cse2: 5 ki anta
+2/5/24, 13:19 - Pavani@cse2: Sir to meeting
+2/5/24, 13:19 - ~: Okay
+2/5/24, 16:42 - Pavani@cse2: Guys sir f6 lo vunnaru
+2/5/24, 16:42 - Pavani@cse2: Come fast
+2/5/24, 17:22 - ~: https://drive.google.com/drive/folders/1woqUjZb-LgCmTUa1lsYDtuculTStAOi4?usp=sharing
+2/15/24, 16:40 - Pavani@cse2: We need to meet sir after 5
+2/15/24, 16:43 - Pavani@cse2: I will confirm the time and class after 5
+2/15/24, 18:27 - Pavani@cse2: f = cv2.imread("images/supriya.PNG")/255
+m,n,p = f.shape
+plt.subplot(1,3,1)
+plt.imshow(f)
+# contrast stretching transformation
+a=25;b=0.3
+g1=1/(1+np.exp(-a*(f-b))) #1/(1+np.exp(-a*(f-b)))      
+plt.subplot(1,3,2)
+plt.imshow(g1)
+# Gamma transformation
+gm=2
+g2 = img**gm  
+plt.subplot(1,3,3)
+plt.imshow(g2)
+2/15/24, 19:01 - Hyma Sri: def warpAffine2(image, T ):
+    y,x = image.shape
+    #v,u = y, x+y   #u=x'  , v=y'
+    u = int( x*np.cos(th) - y* np.sin(th)) +50
+    v = int(x*np.sin(th) + y* np.cos(th))
+    output = np.zeros((v,u), dtype=image.dtype)
+
+    for v1 in range(v): #row
+        for u1 in range(u):  #column
+            # Calculate the corresponding pixel coordinates in the input image
+            in_col, in_row = np.dot(T, [[u1], [v1]]).astype(int)
+            if 0 <= in_row < y and 0 <= in_col < x:
+                output[v1, u1] = image[in_row, in_col]
+    return output
+2/15/24, 19:01 - Hyma Sri: #img = cv2.imread("images/girl.jpg",0)
+#img=np.array([[4,4,0],[4,4,0]])
+n,m=img.shape ; print("shape:",img.shape)
+#T = np.float32([[1, -1], [0, 1]]) # shear inv(T)
+th = np.radians(30);
+T = np.float32([[np.cos(th), np.sin(th)], [-np.sin(th), np.cos(th)]]) # Rotation
+res = warpAffine2(img, T)
+#print( '\n.....',img,res)
+2/15/24, 19:01 - Hyma Sri: plt.subplot(121)
+plt.title("Original")
+plt.imshow(img)
+plt.subplot(122)
+plt.title("Transformed")
+plt.imshow(res)
+plt.tight_layout()
+plt.show()
+3/4/24, 12:13 - Pavani@cse2: Sir ni meet avvali
+3/4/24, 12:18 - Partner💟: Ha
+3/4/24, 13:17 - Pavani@cse2: 5:30 ab3 server room
+3/12/24, 16:40 - ~: We have to meet kksir at sir's cabin.
+Come fast. <This message was edited>
+3/12/24, 17:07 - Partner💟: Self attention
+3/12/24, 17:12 - Partner💟: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Attention
+3/16/24, 08:33 - Pavani@cse2: Afternoon sir ni meet avvali
+3/16/24, 09:38 - Pavani@cse2: ok, I will come at 4 PM...
+3/16/24, 09:38 - Pavani@cse2: <Media omitted>
+3/16/24, 09:38 - Pavani@cse2: <Media omitted>
+3/16/24, 17:10 - +91 93900 17331: ??
+3/16/24, 17:13 - Pavani@cse2: Monday
+3/18/24, 18:47 - Partner💟: <Media omitted>
+3/18/24, 20:24 - Partner💟: import tensorflow as tf
+
+def self_attention(x1,x2):
+  attention_weights = tf.nn.softmax(tf.matmul(x1, tf.transpose(x2)))
+  weighted_features = tf.matmul(attention_weights,x2) +x1
+  return weighted_features
+3/18/24, 20:24 - Partner💟: fs =  self_attention(out_feature1,out_feature1)
+3/18/24, 20:24 - Partner💟: fq = self_attention(map_feature1,out_feature1)
+
+    pred = Lambda(proto_dist)([fs, fq])
+3/18/24, 20:43 - Partner💟: # Trying ...
+
+
+
+train_way = 5
+shot = 5
+query=shot
+val_way=train_way
+n=600
+lr=0.001
+dim=(84,84,3)
+
+#import tensorflow_probability as tfp
+from tensorflow.keras import callbacks as cb
+import tensorflow as tf
+cross = tf.keras.losses.CategoricalCrossentropy()
+
+def scheduler(epoch):
+    global lr
+    if epoch %5== 0:
+        lr/= 1.2
+    return lr
+
+if __name__ == "__main__":
+    conv = conv_net(dim)
+    conv_5d = TimeDistributed(conv)
+    input_shape = (None,84,84,3)
+
+    sample = Input(input_shape)
+    out_feature = conv_5d(sample)
+    out_feature1 = Lambda(reduce_tensor, name="out_feature1")(out_feature)
+
+    fs =  self_attention(out_feature1,out_feature1)
+    #.........................................................
+    inp = Input(input_shape)
+    map_feature = conv_5d(inp)
+    map_feature1 = Lambda(reduce_tensor , name="map_feature1")(map_feature)
+
+    fq = self_attention(map_feature1,out_feature1)
+
+    pred = Lambda(proto_dist)([fs, fq])
+
+    #.........................................................
+
+    combine1 = Model([sample,inp], [pred])
+    optimizer = Adam(0.001)   #'categorical_crossentropy' contrastive_loss,
+
+    combine1.compile(loss = 'categorical_crossentropy', optimizer = optimizer, metrics = ['accuracy'])
+    print(combine1.summary())
+ #.........................................................................................
+    train_loader = Data_GeneratorGeneral(way=train_way, vway=val_way, datatype='train', num_per_class=n,shot=shot,query=query, num_batch=1000)
+    val_loader= Data_GeneratorGeneral(way=train_way, vway=val_way, datatype='val', num_per_class=n,shot=shot,query=query, num_batch=100)
+
+    reduce_lr = cb.ReduceLROnPlateau(monitor = 'val_loss', factor = 0.4,patience = 5, min_lr = 1e-6)
+    stopping = cb.EarlyStopping(monitor='loss', patience=20)
+    lr_sched = cb.LearningRateScheduler(scheduler)
+    tensorboard = cb.TensorBoard() #Data_GeneratorRaviStratify
+
+    history4 = combine1.fit(train_loader,epochs = 10,steps_per_epoch = 100,validation_data = val_loader, use_multiprocessing=True,workers=8, shuffle=False, callbacks=[ lr_sched,reduce_lr, stopping,tensorboard])
+
+combine1.save('Model/proto_conv4_miniImagemet_5_5_1000.h5')    #way-shot-qyery
+
+conv.save('Model/proto_conv_backbone_miniImagemet_5_5_1000_5.h5')
+3/18/24, 21:14 - Partner💟: import tensorflow as tf
+
+def self_attention(x1,x2):
+  attention_weights = tf.nn.softmax(tf.matmul(x1, tf.transpose(x2)))
+  weighted_features = tf.matmul(attention_weights,x2) +x1
+  return weighted_features
+3/18/24, 21:15 - Partner💟: # Trying ...
+
+
+
+train_way = 5
+shot = 5
+query=shot
+val_way=train_way
+n=600
+lr=0.0001
+dim=(84,84,3)
+
+#import tensorflow_probability as tfp
+from tensorflow.keras import callbacks as cb
+import tensorflow as tf
+cross = tf.keras.losses.CategoricalCrossentropy()
+
+def scheduler(epoch):
+    global lr
+    if epoch %5== 0:
+        lr/= 1.2
+    return lr
+
+if __name__ == "__main__":
+    #conv = conv_net(dim)
+    conv= load_model('Model/proto_conv_backbone_miniImagemet_5_5_1000_5.h5')
+    conv_5d = TimeDistributed(conv)
+    input_shape = (None,84,84,3)
+
+    sample = Input(input_shape)
+    out_feature = conv_5d(sample)
+    out_feature1 = Lambda(reduce_tensor, name="out_feature1")(out_feature)
+
+    fs =  self_attention(out_feature1,out_feature1)
+    #.........................................................
+    inp = Input(input_shape)
+    map_feature = conv_5d(inp)
+    map_feature1 = Lambda(reduce_tensor , name="map_feature1")(map_feature)
+
+    fq = self_attention(map_feature1,out_feature1)
+
+    pred = Lambda(proto_dist)([fs, fq])
+
+    #.........................................................
+
+    combine1 = Model([sample,inp], [pred])
+    optimizer = Adam(0.001)   #'categorical_crossentropy' contrastive_loss,
+
+    combine1.compile(loss = 'categorical_crossentropy', optimizer = optimizer, metrics = ['accuracy'])
+    print(combine1.summary())
+ #.........................................................................................
+    train_loader = Data_GeneratorGeneral(way=train_way, vway=val_way, datatype='train', num_per_class=n,shot=shot,query=query, num_batch=1000)
+    val_loader= Data_GeneratorGeneral(way=train_way, vway=val_way, datatype='val', num_per_class=n,shot=shot,query=query, num_batch=100)
+
+    reduce_lr = cb.ReduceLROnPlateau(monitor = 'val_loss', factor = 0.4,patience = 5, min_lr = 1e-6)
+    stopping = cb.EarlyStopping(monitor='loss', patience=20)
+    lr_sched = cb.LearningRateScheduler(scheduler)
+    tensorboard = cb.TensorBoard() #Data_GeneratorRaviStratify
+
+    history4 = combine1.fit(train_loader,epochs = 50,steps_per_epoch = 250,validation_data = val_loader, use_multiprocessing=True,workers=8, shuffle=False, callbacks=[ lr_sched,reduce_lr, stopping,tensorboard])
+
+combine1.save('Model/proto_conv4_miniImagemet_5_5_1000.h5')    #way-shot-qyery
+
+conv.save('Model/proto_conv_backbone_miniImagemet_5_5_1000_5.h5')
+3/22/24, 17:59 - Pavani@cse2: https://neptune.ai/blog/transfer-learning-guide-examples-for-images-and-text-in-keras
+3/22/24, 17:59 - Pavani@cse2: https://medium.com/@draj0718/image-classification-and-prediction-using-transfer-learning-3cf2c736589d
+3/30/24, 20:23 - ~: http://10.11.3.10:8899
+password: csegpu
+can access with  campus wifi.
+4/19/24, 16:29 - Pavani@cse2: Sir rammanru
+4/19/24, 16:29 - Pavani@cse2: Server room
+4/19/24, 16:51 - ~: 10.11.3.10:8890
+Password:jupyterWinLab <This message was edited>
+4/19/24, 18:07 - Partner💟: <Media omitted>
+4/26/24, 10:20 - Pavani@cse2: class preModel(keras.Model):
+    def __init__(self,dim):
+        super().__init__(dim)
+        self.conv1=keras.layers.Conv2D(64,(3,3),padding='same',input_shape=dim)
+        self.conv2=keras.layers.Conv2D(64,(3,3),padding='same')
+        self.norm1 = tf.keras.layers.BatchNormalization()
+        self.norm2 = tf.keras.layers.BatchNormalization()
+        self.pool1=keras.layers.MaxPooling2D(2,2)
+        self.pool2=keras.layers.MaxPooling2D(2,2)
+
+    def call(self, x):
+        #def forward(self, x):
+        x = self.pool1(keras.activations.relu(self.norm1(self.conv1(x))))
+        x = self.pool2(keras.activations.relu(self.norm2(self.conv2(x))))
+        return x
+
+def get_modelClassify(input_shape=(84,84,3)):
+    preConv = preModel(input_shape)
+    postConv = postModel((20,20,64))
+    #attentionBlock=AttentionBlock(64,  up_factor=2)
+    # m3= load_model('Model/conv2211_22classify_miniImagemet.h5')
+    # feature_att = tf.keras.models.Model(inputs=m3.input, outputs=m3.layers[-4].output)
+    # feature_att.trainable=False
+
+    inputs = layers.Input(shape=input_shape)
+    x0=preConv(inputs)
+    #mn=tf.reduce_mean(x0, axis=0)
+    position_mask = keras.layers.Conv2D(64, (1,1), activation='linear', input_dim=(8,8,1) )(mask)
+    xa=postConv(x0)
+    # #x1=feature_att(x0);
+    # x1=tf.keras.layers.UpSampling2D(size=(4,4))(xa)
+    x2=tf.keras.layers.Attention()([x0, xa*position_mask])
+    x3=postConv(xa+x2) #
+
+
+class AttentionBlock(layers.Layer):
+    def __init__(self, filters, up_factor=2):
+        super(AttentionBlock, self).__init__()
+        self.up_factor = up_factor
+        self.W_l = layers.Conv2D(filters, kernel_size=1, padding='valid', use_bias=False)
+        self.W_g = layers.Conv2D(filters, kernel_size=1, padding='valid', use_bias=False)
+        self.phi = layers.Conv2D(filters, kernel_size=1, padding='valid', use_bias=True)
+    def call(self, l, g):
+        N, C, W, H = l.shape
+        l_ = self.W_l(l)
+        g_ = self.W_g(g)
+        for _ in range(self.up_factor):
+            g_ = tf.keras.layers.UpSampling2D(size=(2, 2))(g_)
+
+        output = tf.keras.layers.Attention()([l_, g_])
+        return output
+4/26/24, 10:20 - Pavani@cse2: check it..
+4/26/24, 10:20 - Pavani@cse2: Sir pettau
+4/26/24, 14:39 - Hyma Sri: https://ieeexplore.ieee.org/document/8474802/figures#figures
+4/26/24, 14:39 - Hyma Sri: https://ieeexplore.ieee.org/document/8920338/authors#authors
+4/26/24, 15:21 - Partner💟: https://www.researchgate.net/publication/375671799_Transfer_Learning_in_Deep_Neural_Networks
+4/26/24, 15:34 - Partner💟: <Media omitted>
+4/26/24, 15:40 - Hyma Sri: https://www.tensorflow.org/tutorials/images/transfer_learning
+4/26/24, 18:54 - ~: <Media omitted>
+4/27/24, 10:28 - ~: class selfAttention(Layer):
+    def __init__(self, **kwargs):
+        super(selfAttention, self).__init__(**kwargs)
+        
+    def call(self, x):
+        out = tf.keras.layers.Attention()([x, x])
+        return out
+md1= conv_net((84,84,3))
+print(md1.summary())
+def convNet(dim):
+    convnet = Sequential()   
+    for i in range(3):
+        convnet.add(keras.layers.Conv2D(64,(3,3),padding='same',input_shape=dim))
+        convnet.add(BatchNormalization())
+        convnet.add(Activation('relu'))
+        convnet.add(MaxPooling2D())
+    #convnet.add(selfAttention())
+    convnet.add(keras.layers.Conv2D(64,(3,3),padding='same'))
+    convnet.add(BatchNormalization())
+    convnet.add(Activation('relu'))
+    convnet.add(MaxPooling2D())
+    convnet.add(Flatten())
+    return convnet
+
+input_shape=(84,84,3)
+preConv = convModel(input_shape)
+inputs = layers.Input(shape=input_shape)
+out1 = preConv(inputs)
+out2 = tf.keras.layers.Attention()([out1, out1])
+output = tf.keras.layers.Dense(2, activation="softmax")(out2)
+model = keras.Model(inputs=inputs, outputs=output)
+
+print(model.summary())
+4/27/24, 10:28 - ~: check the code..
+4/28/24, 10:56 - Pavani@cse2: Team@Pavani  check the code below... 
+
+from tensorflow.keras.layers import Layer
+from keras.backend import softmax
+
+class invAttention(Layer):
+    def __init__(self, **kwargs):
+        super(invAttention, self).__init__(**kwargs)
+        
+    def call(self, x):
+        x1 = tf.transpose(x, perm=(0, 2, 1, 3))
+        scores = tf.matmul(x, x1, transpose_b=True) / 40.0
+        # Computing the weights by a softmax operation
+        weights = softmax(tf.abs(scores - 0.5)) 
+        # Computing the attention by a weighted sum of the value vectors
+        return matmul(weights, x1)
+
+class selfAttention(Layer):
+    def __init__(self, **kwargs):
+        super(selfAttention, self).__init__(**kwargs)
+        
+    def call(self, x):
+        x1 = tf.transpose(x, perm=(0, 2, 1, 3))
+        scores = tf.matmul(x, x1, transpose_b=True) / 40.0
+        # Computing the weights by a softmax operation
+        weights = softmax(scores) 
+        # Computing the attention by a weighted sum of the value vectors
+        return matmul(weights, x1)
+
+def convNet(dim):
+    convnet = Sequential()   
+    for i in range(3):
+        convnet.add(keras.layers.Conv2D(64,(3,3),padding='same',input_shape=dim))
+        convnet.add(BatchNormalization())
+        convnet.add(Activation('relu'))
+        convnet.add(MaxPooling2D())
+    #convnet.add(selfAttention())
+    convnet.add(invAttention())
+    convnet.add(keras.layers.Conv2D(64,(3,3),padding='same'))
+    convnet.add(BatchNormalization())
+    convnet.add(Activation('relu'))
+    convnet.add(MaxPooling2D())
+    convnet.add(Flatten())
+    #convnet.add(Normalization(mean=0., variance=1.))
+    return convnet
+md1= conv_net((84,84,3))
+print(md1.summary())
+6/12/24, 13:03 - Pavani@cse2: Imagenet nunchi dataset ele download cheyyali
+6/12/24, 13:03 - Partner💟: Imagenet dataset aa ?
+6/12/24, 13:03 - Pavani@cse2: ha
+6/12/24, 13:03 - Pavani@cse2: sir konni steps cchepparu
+6/12/24, 13:03 - Partner💟: Kaggle website lo
+6/12/24, 13:03 - Pavani@cse2: ela
+6/12/24, 13:03 - Partner💟: Untundi
+6/12/24, 13:04 - Pavani@cse2: <Media omitted>
+6/12/24, 13:05 - Pavani@cse2: okasri chudu
+6/12/24, 13:05 - Pavani@cse2: data ela techukovali
+6/12/24, 13:06 - Pavani@cse2: step2
+6/12/24, 13:06 - Partner💟: Dataset untundi .CSV files lo
+6/12/24, 13:06 - Partner💟: Download chesukovali website nundu
+6/12/24, 13:06 - Pavani@cse2: eekada
+6/12/24, 13:06 - Pavani@cse2: em website
+6/12/24, 13:06 - Partner💟: <Media omitted>
+6/12/24, 13:07 - Partner💟: Download chesukovali
+6/12/24, 13:07 - Pavani@cse2: ha chustunna
+6/12/24, 13:08 - Pavani@cse2: em search cheyyali
+6/12/24, 13:08 - Partner💟: Kaggle imagenet dataset
+6/12/24, 13:08 - Pavani@cse2: aa website lo
+6/12/24, 13:11 - Pavani@cse2: 20 samples of each class ela techukovali
+6/12/24, 13:12 - Pavani@cse2: Malleswari
+6/12/24, 13:12 - Partner💟: Dataset first download chesukuna tharavatha 
+
+Manam files ni load chesukuntam kada oka list loo
+6/12/24, 13:13 - Partner💟: Andulo nundi 20 tuples ee ready chesuko
+6/12/24, 13:13 - Pavani@cse2: google colab lona
+6/12/24, 13:13 - Partner💟: List[0:20]
+6/12/24, 13:13 - Partner💟: Syntax sarigga telidu pavani
+6/12/24, 13:13 - Partner💟: Ha
+6/12/24, 13:13 - Pavani@cse2: okasari chatgpt lo syntax chudava
+6/12/24, 13:13 - Partner💟: Ha
+6/12/24, 13:26 - Partner💟: Dataframe ki convert chesukuni...
+Head command use cheyyochu
+6/12/24, 21:53 - Pavani@cse2: Malleswari ala cheste anni images kalipi oke dataset aindi andulo 10 vastunnai
+6/12/24, 21:53 - Pavani@cse2: Kani manaki each class nunchi 20 samples kavali
+6/13/24, 12:09 - Partner💟: This message was deleted
+6/13/24, 12:09 - Partner💟: ImageNet anedhe oka dataset
+6/13/24, 12:09 - Partner💟: dhanelo 1000 classes images vuntaye
+6/13/24, 12:09 - Partner💟: andulo oak 10-20 classes images tesukune
+6/13/24, 12:09 - Partner💟: pretrained model use chese cheyemane natu vunaru
+6/13/24, 12:09 - Partner💟: naku ala ardham iyendhe anteh
+6/13/24, 12:09 - Partner💟: kendha equaitons ave ardham kaledhu
+6/13/24, 12:09 - Partner💟: import tensorflow as tf
+import tensorflow_hub as hub
+import os
+
+# Set paths to your custom dataset
+train_dir = 'path_to_your_dataset/train'
+validation_dir = 'path_to_your_dataset/validation'
+
+# Define image size and batch size
+IMG_SIZE = 224
+BATCH_SIZE = 32
+
+# Data augmentation and preprocessing
+train_datagen = tf.keras.preprocessing.image.ImageDataGenerator(
+    rescale=1./255,
+    rotation_range=40,
+    width_shift_range=0.2,
+    height_shift_range=0.2,
+    shear_range=0.2,
+    zoom_range=0.2,
+    horizontal_flip=True,
+    fill_mode='nearest'
+)
+
+validation_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
+
+train_generator = train_datagen.flow_from_directory(
+    train_dir,
+    target_size=(IMG_SIZE, IMG_SIZE),
+    batch_size=BATCH_SIZE,
+    class_mode='categorical'
+)
+
+validation_generator = validation_datagen.flow_from_directory(
+    validation_dir,
+    target_size=(IMG_SIZE, IMG_SIZE),
+    batch_size=BATCH_SIZE,
+    class_mode='categorical'
+)
+
+# Load the pre-trained ResNet model from TensorFlow Hub
+resnet_url = "https://tfhub.dev/google/imagenet/resnet_v2_50/classification/5"
+base_model = hub.KerasLayer(resnet_url, input_shape=(IMG_SIZE, IMG_SIZE, 3), trainable=False)
+
+# Build your model
+model = tf.keras.Sequential([
+    base_model,
+    tf.keras.layers.Dense(1024, activation='relu'),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(train_generator.num_classes, activation='softmax')
+])
+
+model.compile(
+    optimizer=tf.keras.optimizers.Adam(),
+    loss='categorical_crossentropy',
+    metrics=['accuracy']
+)
+
+# Train the model
+history = model.fit(
+    train_generator,
+    epochs=10,
+    validation_data=validation_generator
+)
+
+# Evaluate the model
+loss, accuracy = model.evaluate(validation_generator)
+print(f'Validation loss: {loss}')
+print(f'Validation accuracy: {accuracy}')
+
+# Function to classify images
+def classify_image(model, img_path):
+    img = tf.keras.preprocessing.image.load_img(img_path, target_size=(IMG_SIZE, IMG_SIZE))
+    img_array = tf.keras.preprocessing.image.img_to_array(img)
+    img_array = tf.expand_dims(img_array, 0)  # Create a batch axis
+    predictions = model.predict(img_array)
+    predicted_class = train_generator.class_indices
+    predicted_class = {v: k for k, v in predicted_class.items()}
+    class_idx = tf.argmax(predictions[0]).numpy()
+    return predicted_class[class_idx]
+
+# Classify a new image
+new_image_path = 'path_to_your_dataset/new_image.jpg'
+predicted_class = classify_image(model, new_image_path)
+print(f'The predicted class is: {predicted_class}')
+6/13/24, 12:09 - Partner💟: ee code chudu okasare ardham avudhe pretrained ela use cheyale oo
+6/13/24, 12:20 - Partner💟: <Media omitted>
+6/17/24, 16:56 - +91 93900 17331: # Title Slide
+- Project Title: "Transfer Learning for [Your Specific Task]"
+- Your Name: [Your Name]
+- Affiliation: [Your Affiliation]
+- Date: [Presentation Date]
+
+# Slide 1: Introduction
+- What is Transfer Learning?
+  - Definition and basic concept
+  - Importance and applications
+
+# Slide 2: Project Motivation
+- Why Transfer Learning?
+  - Challenges in training models from scratch
+  - Benefits of leveraging pre-trained models
+
+# Slide 3: Problem Statement
+- Objective of the Project
+  - Specific problem you're addressing
+  - Expected outcomes
+
+# Slide 4: Literature Review
+- Related Work
+  - Overview of existing methods and research
+  - Comparison with your approach
+
+# Slide 5: Dataset
+- Description of the Dataset(s)
+  - Source and size of the dataset
+  - Preprocessing steps
+  - Train/Test split
+
+# Slide 6: Pre-trained Model Selection
+- Choosing the Right Model
+  - Criteria for selecting a pre-trained model (e.g., VGG16, ResNet, BERT)
+  - Overview of the selected model architecture
+
+# Slide 7: Methodology
+- Approach
+  - Detailed explanation of your transfer learning approach
+  - Steps involved in adapting the pre-trained model to your specific task
+
+# Slide 8: Implementation
+- Technical Details
+  - Tools and frameworks used (e.g., TensorFlow, PyTorch)
+  - Hyperparameters and training setup
+  - Fine-tuning vs. feature extraction
+
+# Slide 9: Results
+- Evaluation Metrics
+  - Accuracy, precision, recall, F1-score, etc.
+- Performance Comparison
+  - Baseline vs. transfer learning model performance
+  - Visualizations of results (graphs, tables)
+
+# Slide 10: Discussion
+- Analysis of Results
+  - Interpretation of the outcomes
+  - Insights gained from the project
+
+# Slide 11: Challenges and Limitations
+- Difficulties Faced
+  - Technical and methodological challenges
+  - Limitations of the approach
+
+# Slide 12: Future Work
+- Potential Improvements
+  - Suggestions for further research
+  - Possible enhancements to the model or methodology
+
+# Slide 13: Conclusion
+- Summary of Findings
+  - Key takeaways from the project
+  - Overall impact of using transfer learning
+
+# Slide 14: References
+- Citations
+  - List of academic papers, articles, and resources referred to in the project
+
+# Slide 15: Q&A
+- Questions and Answers
+  - Invite questions from the audience to engage in a discussion
+6/19/24, 11:42 - Partner💟: All you come to ab 2 for project discussion and complete it Today....
+
+🙄
+6/19/24, 15:03 - +91 93900 17331: Introduction.   
+Project Motivation 
+Problem Statement
+Methodology
+Implementation
+Results
+Challenge and Limitations
+Future Work
+Conclusion <This message was edited>
+6/19/24, 18:31 - +91 93900 17331: <Media omitted>
+6/19/24, 18:31 - +91 93900 17331: <Media omitted>
+6/20/24, 10:23 - Pavani@cse2: Lavanya nadantlo exdcute avvatledu
+6/20/24, 10:24 - Pavani@cse2: 1 hour nunchi ade chestunna
+6/20/24, 12:05 - ~: Ohh
+6/20/24, 12:05 - ~: Ekkada vunnav pavani?
+6/20/24, 12:15 - Pavani@cse2: collage lo vunna
+6/20/24, 12:23 - Partner💟: Ee class ?
+6/20/24, 12:24 - Pavani@cse2: 10lo vunna
+6/20/24, 12:25 - Partner💟: Mess chesi vasthanu pavani nenu
+6/20/24, 12:33 - Hyma Sri: Mem G6 ki vacham ippude
+6/20/24, 14:20 - Partner💟: <Media omitted>
+6/20/24, 14:24 - Pavani@cse2: <Media omitted>
+6/21/24, 10:35 - Partner💟: Pavani photos pettu
+6/21/24, 10:50 - Pavani@cse2: <Media omitted>
+6/21/24, 10:50 - Pavani@cse2: <Media omitted>
+6/21/24, 10:50 - Pavani@cse2: <Media omitted>
+6/21/24, 10:50 - Pavani@cse2: Eve vunnai ma daggara
+6/21/24, 16:44 - ~: **Abstract**
+
+This project addresses the issue of catastrophic forgetting in neural networks during sequential training on different classes. We implemented an auxiliary Prototypical Network (Protonet) model to enhance knowledge retention and compared its performance with the standard Protonet model. Our findings demonstrate that the auxiliary Protonet significantly reduces forgetting, yielding superior results in maintaining learned information across multiple training sessions. This approach offers a promising solution for improving continual learning in dynamic environments.
+6/21/24, 17:25 - Partner💟: 5. Autonomous Vehicles:
+Object Detection and Classification: Pre-trained vision models are adapted for detecting and classifying objects (pedestrians, other vehicles, road signs) in various driving conditions and environments, enhancing the safety and reliability of autonomous driving systems.
+6/21/24, 17:25 - Partner💟: Market Prediction: Models trained on historical market data can be adapted to predict stock prices or market trends for specific sectors or companies.
+6/21/24, 17:26 - Partner💟: Voice Assistants: Pre-trained models for speech-to-text conversion are fine-tuned for specific accents, dialects, or industry-specific jargon, improving the performance of voice assistants like Amazon Alexa, Google Assistant, and Apple Siri.
+6/21/24, 17:42 - ~: <Media omitted>
+6/21/24, 18:07 - Partner💟: Step 1: Setup and Import Libraries
+6/21/24, 18:07 - Partner💟: Step 2: Load and Preprocess the Data
+6/21/24, 18:08 - Partner💟: Step 3: Load the Pre-trained Model
+6/21/24, 18:09 - Partner💟: Step4: Build a AuxilaryProtonetModel
+6/21/24, 18:09 - Partner💟: Step 5: Add Custom Layers on Top
+6/21/24, 18:09 - Partner💟: Step 6: Compile the Model
+6/21/24, 18:09 - Partner💟: Step 7: Train the Model
+6/21/24, 18:10 - Partner💟: Step 8: Unfreeze Some Layers of the Base Model (Fine-Tuning)
+6/21/24, 18:10 - Partner💟: Step 9: Evaluate the Model
+6/21/24, 18:10 - Partner💟: Step 10: Save the Model
+6/21/24, 18:11 - Partner💟: Summary of Steps
+Setup and Import Libraries
+Load and Preprocess the Data
+Load the Pre-trained Model
+Freeze the Base Model Layers
+Add Custom Layers on Top
+Compile the Model
+Train the Model
+Unfreeze Some Layers of the Base Model (Fine-Tuning)
+Evaluate the Model
+Save the Model
+6/21/24, 18:18 - Partner💟: import os
+import pandas as pd
+from PIL import Image
+import numpy as np
+import tensorflow as tf
+import math
+import matplotlib.pyplot as plt
+import os
+import keras
+import numpy as np
+import numpy.random as rng
+import random
+import tensorflow
+from tensorflow.keras import backend as K
+from tensorflow.keras import layers
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.models import  Sequential,load_model, Model, save_model
+from tensorflow.keras.layers import *
+from tensorflow.keras import regularizers as rg
+from tensorflow.keras import callbacks as cb
+6/21/24, 18:22 - Partner💟: import os
+import pandas as pd
+from PIL import Image
+import numpy as np
+import math
+import matplotlib.pyplot as plt
+import random
+import tensorflow as tf
+6/21/24, 18:23 - Partner💟: Step 2: Data Loading and Preprocessing
+Data is loaded from Google Drive and preprocessed using PIL and NumPy.
+Data augmentation is performed using TensorFlow’s ImageDataGenerator.
+6/21/24, 18:24 - Partner💟: def convNet(dim):
+    convnet = Sequential()
+    #convnet.add(tf.keras.layers.RandomFlip( mode=HORIZONTAL_AND_VERTICAL, seed=None, **kwargs))
+    for i in range(4):
+
+        convnet.add(Conv2D(64,(3,3),padding='same',input_shape=dim))
+        convnet.add(BatchNormalization())
+        convnet.add(Activation('relu'))
+        convnet.add(MaxPooling2D())
+    convnet.add(Flatten())
+    #convnet.add(Normalization(mean=0., variance=1.))
+    return convnet
+6/21/24, 18:40 - Partner💟: Initial Distance Calculation (d1):
+
+Compute the prototype distance between out_feature1 and map_feature1 using a lambda function (proto_dist).
+Attention Mechanism:
+
+Matrix Multiplication: Multiply out_feature1 by a constant matrix A_reduced to get attention scores (SA).
+Softmax Normalization: Apply softmax to SA to get softmax_SA.
+Weighted Sum: Multiply softmax_SA by A_reduced to get d20.
+Second Distance Calculation (d2):
+
+Compute the prototype distance between d20 and map_feature1 using the same lambda function (proto_dist).
+Final Prediction (pred):
+
+Average the two distances (d1 and d2) to form the final prediction (pred).
+6/21/24, 18:42 - Partner💟: Step 6: Compile the Model
+The model is compiled with a suitable loss function, optimizer, and metrics.
+6/21/24, 18:42 - Partner💟: combine1.compile(loss = 'categorical_crossentropy', optimizer = optimizer, metrics = ['accuracy'])
+6/21/24, 18:42 - Partner💟: Step 7: Train the Model
+The model is trained on the dataset.
+6/21/24, 18:43 - Partner💟: history4 = combine1.fit(train_loader,epochs = 20,steps_per_epoch = 100,validation_data = val_loader, use_multiprocessing=True, workers=8, shuffle=False, callbacks=[ lr_sched,reduce_lr, stopping,tensorboard])
+6/21/24, 18:43 - Partner💟: Step 8: Unfreeze Some Layers of the Base Model (Fine-Tuning)
+Optionally, some layers of the base model are unfrozen, and the model is fine-tuned.
+6/21/24, 18:44 - Partner💟: Step 9: Evaluate the Model
+The model’s performance is evaluated on the validation set or a test set.
+6/21/24, 18:45 - Partner💟: Step 10: Save the Model
+The trained model is saved for future use.
+6/21/24, 18:45 - Partner💟: combine1.save('Model/test_new_h5_file.h5')
+6/21/24, 18:55 - Partner💟: Conclusion
+In this project, we successfully enhanced a pre-trained model using transfer learning and an auxiliary ProtoNet Model.
+
+Key Achievements:
+Transfer Learning:
+
+Utilized a pre-trained model to efficiently adapt to our specific dataset.
+Fine-tuned the model for improved accuracy and performance.
+Auxiliary ProtoNet Model:
+
+Implemented prototype distance calculations to measure feature similarities.
+Used an attention mechanism to focus on important features.
+Combined these methods to achieve more accurate predictions.
+Highlights
+Efficiency: Transfer learning allowed for quick and effective model development.
+Enhanced Performance: The auxiliary ProtoNet Model improved predictive capabilities.
+Versatility: This approach can be applied to various tasks and datasets.
+6/21/24, 18:59 - Partner💟: Future Directions and Scope
+Medical Imaging: Apply the model to various medical imaging tasks, such as detecting diseases from X-rays or MRIs, where fine-tuning pre-trained models can significantly improve diagnostic accuracy.
+Natural Language Processing (NLP): Extend the approach to NLP tasks like sentiment analysis, machine translation, or named entity recognition, using pre-trained language models enhanced with attention mechanisms.
+6/21/24, 19:05 - Partner💟: Automated Transfer Learning:
+
+Implement automated machine learning (AutoML) techniques to streamline the process of selecting the best pre-trained models and fine-tuning strategies for specific tasks.
+6/21/24, 19:19 - Hyma Sri: <Media omitted>
+6/21/24, 19:26 - +91 93900 17331: <Media omitted>
+6/21/24, 19:42 - +91 93900 17331: This message was deleted
+6/21/24, 19:52 - +91 93900 17331: What cross entropy function did you used?
+6/21/24, 19:53 - +91 93900 17331: What is the importance of max pooling?
+6/21/24, 19:54 - +91 93900 17331: To reduce  the  dimension, it takes the maximum value
+6/22/24, 08:37 - Pavani@cse2: Andaru clg ki vacheyandi chusukundam
+6/22/24, 08:37 - Pavani@cse2: Em cheyyalo
+6/22/24, 08:37 - Pavani@cse2: Malleswari ppt and chart gpt script pedata annavu
+6/22/24, 09:02 - Hyma Sri pinned a message
+6/22/24, 09:19 - +91 93900 17331: Ppt please
+6/22/24, 09:26 - Partner💟: This message was deleted
+6/22/24, 09:26 - Partner💟: need to modify this
+6/22/24, 09:27 - Partner💟: Sry guys
+6/22/24, 09:27 - ~: 😅
+6/22/24, 09:29 - Partner💟: <Media omitted>
+6/22/24, 10:01 - Partner💟: Take it as a reference until
+6/22/24, 10:32 - Partner💟: <Media omitted>
+6/22/24, 18:35 - +91 93900 17331: <Media omitted>
+6/22/24, 19:26 - Pavani@cse2: https://docs.google.com/document/d/1GQfCo8-UEYA61vghNql8ln1msZlj9ElYqOBHwp-kYRw/edit?usp=drivesdk
+6/22/24, 19:44 - Hyma Sri: Transfer learning is a widely used technique that reuses a model developed for one task as the starting point for a model on a second task. However, a common challenge with transfer learning is that models often forget previous learnings when retrained on new classes, a phenomenon known as catastrophic forgetting. This paper aims to tackle this issue and enhance knowledge retention across multiple training sessions.
+
+Existing approaches to increase transferability typically rely on replicating the models or using additional memory space for the parameters or data augmentations. In this work, we implemented an auxiliary Prototypical Network (Protonet) model to address the problem of catastrophic forgetting. Our approach exploits another dataset (e.g., CIFAR-100) to create auxiliary prototypes, which significantly reduces forgetting and shows better retention across multiple training sessions. This innovative approach improves the performance of continual learning in dynamic environments.
+6/22/24, 19:49 - Hyma Sri: This project explores the use of transfer learning techniques to improve the retention of machine learning models, a critical challenge in real-world applications. By leveraging pre-trained models and fine-tuning them on specific tasks, the researchers aim to develop more robust and adaptable AI systems.
+Project Motivation
+
+The motivation behind this project is to explore the potential of transfer learning in improving the accuracy and efficiency of models, particularly when dealing with limited datasets. By using pre-trained models, the goal is to build robust models with reduced training time and computational resources.
+Real-World Applications
+
+One key application of this approach is in the field of voice assistants. Pre-trained models for speech-to-text conversion can be fine-tuned for specific accents, dialects, or industry-specific jargon, improving the performance of voice assistants like Amazon Alexa, Google Assistant, and Apple Siri.
+Market Prediction
+
+Machine learning models trained on historical market data can be effectively adapted to predict stock prices or market trends for specific sectors or companies. By leveraging transfer learning techniques, these pre-trained models can be fine-tuned to capture the unique patterns and dynamics of financial markets, enabling more accurate forecasting and informed investment decisions.
+Autonomous Vehicles
+
+In the realm of autonomous driving, pre-trained computer vision models play a crucial role in object detection and classification. These models are adapted to identify and differentiate between various objects, such as pedestrians, other vehicles, and road signs, in diverse driving conditions and environments. This enhanced perception capability is essential for improving the safety and reliability of autonomous driving systems, ensuring the vehicle can navigate safely and respond appropriately to potential hazards.
+Potential Impact
+
+By leveraging transfer learning, this project aims to develop more accurate and efficient models that can be readily deployed in a variety of real-world scenarios, from voice recognition to image classification. The potential impact is to enhance the capabilities of intelligent systems and make them more accessible and effective for end-users. <This message was edited>
+6/22/24, 19:55 - Hyma Sri: <Media omitted>
+7/12/24, 09:29 - Pavani@cse2: https://forms.gle/q4v1LgQTryMgRnMK9 relating to the mini/summar project details
+7/18/24, 17:04 - Partner💟: https://forms.gle/q4v1LgQTryMgRnMK9 relating to the mini/summar project details
+7/18/24, 17:04 - Partner💟: Pavani ee form fill chesara
+7/18/24, 17:04 - Partner💟: Sir pettindhi ?
+7/18/24, 17:07 - Hyma Sri: cheyyaledu anukunta
+7/18/24, 17:11 - Partner💟: Summer intern ? <This message was edited>
+8/28/24, 15:48 - ~: Kalavathi Mam mana Major project guide.
+8/28/24, 15:49 - Partner💟: Ha
+8/28/24, 15:49 - ~: Meeru evaru leru ga
+8/28/24, 15:49 - ~: Nenu em cheyyali..?
+8/28/24, 15:50 - Partner💟: Sir campus lo leruga
+8/28/24, 15:50 - ~: Sir 3 batches ni vesaru
+8/28/24, 15:50 - ~: Sir ki*
+8/28/24, 15:50 - Partner💟: Sir ki pavani call chesindi
+8/28/24, 15:50 - ~: Ohh
+8/28/24, 15:50 - Partner💟: Busy vasthundi anta
+8/28/24, 15:51 - Partner💟: Ha
+8/28/24, 15:51 - ~: Edho okati naaku cheppandi .
+guide ni meet avvali ani antunnaru..
+8/28/24, 15:51 - Partner💟: Sir rply ichhaka chepthadi anta
+8/28/24, 15:52 - ~: Ha sarey
+8/28/24, 15:52 - Partner💟: Ha

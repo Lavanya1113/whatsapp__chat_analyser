@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Chat Analysis Results</title>
+    <!-- Optional: Link to Bootstrap for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">WhatsApp Chat Analysis Results</h1>
+
+        <!-- Overall Analysis -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3>Overall Analysis</h3>
+            </div>
+            <div class="card-body">
+                <p><strong>Total Messages:</strong> {{ overall_activity.total_messages }}</p>
+                <p><strong>Total Emojis Used:</strong> {{ overall_activity.total_emojis }}</p>
+            </div>
+        </div>
+
+        <!-- Most Active Users -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3>Most Active Users (From Most to Least Active)</h3>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    {% for user, count in overall_activity.active_users.items() %}
+                        <li class="list-group-item">{{ user }}: {{ count }} messages</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <!-- Most Frequently Used Emojis -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3>Most Frequently Used Emojis</h3>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    {% for emoji, count in overall_activity.most_common_emojis %}
+                        <li class="list-group-item">{{ emoji }}: {{ count }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <!-- Specific User Analysis -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3>Analyze Specific User</h3>
+            </div>
+            <div class="card-body">
+                <form method="post" action="{{ url_for('user_analysis') }}">
+                    <div class="form-group">
+                        <label for="username">Enter Username:</label>
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Enter username" required>
+                    </div>
+                    <!-- Correct the file name hidden input to use the passed file_name variable -->
+                    <input type="hidden" name="file_name" value="{{ file_name }}">
+                    <button type="submit" class="btn btn-primary">Analyze User</button>
+                </form>
+            </div>
+        </div>
+        
+
+        <!-- Display Visualization Images -->
+        <h2 class="text-center mt-5">Visualizations</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ plots['words_per_user'] }}" class="img-fluid mb-3" alt="Words Per User">
+            </div>
+            <div class="col-md-6">
+                <img src="{{ plots['media_per_user'] }}" class="img-fluid mb-3" alt="Media Per User">
+            </div>
+            <div class="col-md-6">
+                <img src="{{ plots['weekly_activity'] }}" class="img-fluid mb-3" alt="Weekly Activity">
+            </div>
+            
+            <div class="col-md-6">
+                <img src="{{ plots['user_activity_distribution'] }}" class="img-fluid mb-3" alt="User Activity Distribution">
+            </div>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='word_cloud.png') }}" alt="Word Cloud">
+                <!-- <img src="{{ plots['most_active_user'] }}" class="img-fluid mb-3" alt="Most Active User"> -->
+            </div>
+            
+        </div>
+
+
+
+        <!-- Analysis Results for Each User -->
+        <!-- <h2 class="text-center mt-5">Analysis Results for Each User</h2> -->
+        <!-- {% for user, activity in user_activity.items() %}
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3>{{ user }}</h3>
+                </div>
+                <div class="card-body">
+                    <p><strong>Number of Messages:</strong> {{ activity['num_messages'] }}</p>
+                    <p><strong>Number of Media Shared:</strong> {{ activity['media_shared'] }}</p>
+                    <p><strong>Most Frequently Used Emojis:</strong> {{ activity['emoji_counts'] }}</p>
+                    <p><strong>Most Frequently Used Words:</strong> {{ activity['most_common_words'] }}</p>
+                </div>
+            </div>
+        {% endfor %} -->
+
+        <a href="/" class="btn btn-secondary mt-3">Back to Home</a>
+    </div>
+</body>
+</html>
